@@ -37,7 +37,7 @@ function handleSubmit(event) {
 
 }
 
-// TODO: Add the selected item and quantity to the cart
+//COMPLETED!!! TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   //COMPLETED!!! TODO: suss out the item picked from the select list
   let item = document.getElementById('item').value;
@@ -45,13 +45,23 @@ function addSelectedItemToCart() {
   let quantity = document.getElementById('quantity').value;
   console.log('quantity selected', quantity);
   //COMPLETED!!! TODO: get the quantity
-  // TODO: using those, add one item to the Cart
+  //COMPLETEED!!! TODO: using those, add one item to the Cart
   state.cart.addItem(item, quantity);
 }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
+  event.preventDefault();
   // TODO: Get the item and quantity from the form
+
+  let item = document.getElementById('item').value;
+  let quantity = document.getElementById('quantity').value;
+  let cartContents = document.getElementById('cartContents');
+  let addedItem = document.createElement('div');
+  addedItem.textContent = item, quantity;
+  cartContents.appendChild(addedItem);
+
+
   // TODO: Add a new element to the cartContents div with that information
 }
 
