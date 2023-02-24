@@ -51,8 +51,8 @@ function addSelectedItemToCart() {
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
-  event.preventDefault();
   // TODO: Get the item and quantity from the form
+  event.preventDefault();
 
   let item = document.getElementById('item').value;
   let quantity = document.getElementById('quantity').value;
